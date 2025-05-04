@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas para Restaurantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Reservas para Restaurantes</h1>
+        <nav>
+            <ul>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#disponibilidad">Disponibilidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="clientes">
+            <h2>Clientes</h2>
+            <div id="lista-de-clientes">
+                </div>
+            <form id="formulario-cliente">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required><br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono"><br>
+                <button type="submit">Agregar Cliente</button>
+            </form>
+        </section>
+
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <div id="lista-de-reservas">
+                </div>
+            <form id="formulario-reserva">
+                <label for="cliente">Cliente:</label>
+                <select id="cliente" name="cliente" required>
+                    </select><br>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required><br>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required><br>
+                <label for="cantidad-personas">Número de Personas:</label>
+                <input type="number" id="cantidad-personas" name="cantidad-personas" required><br>
+                <label for="mesa">Mesa:</label>
+                <select id="mesa" name="mesa" required>
+                    </select><br>
+                <button type="submit">Crear Reserva</button>
+            </form>
+        </section>
+
+        <section id="disponibilidad">
+            <h2>Disponibilidad de Mesas</h2>
+            <div id="calendario-disponibilidad">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Reservas para Restaurantes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
